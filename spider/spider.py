@@ -7,6 +7,7 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
+from setting import setting
 from util.browserUtil import create_chrome_driver
 from util.mysqlUtil import MySQLTool
 from selenium.webdriver.support import expected_conditions as EC
@@ -303,14 +304,14 @@ class CrawlThread(threading.Thread):
         time.sleep(random.randint(2, 7))
         WebDriverWait(self.dri, 60, 0.5).until(EC.presence_of_element_located(
             (By.CSS_SELECTOR, "#form > div:nth-child(6) > img")))
-        self.dri.find_element(By.CSS_SELECTOR, '#email').send_keys('youremail')
-        self.dri.find_element(By.CSS_SELECTOR, '#password').send_keys('yourpassword')
+        self.dri.find_element(By.CSS_SELECTOR, '#email').send_keys(setting['email'])
+        self.dri.find_element(By.CSS_SELECTOR, '#password').send_keys(setting['password'])
         self.dri.find_element(By.CSS_SELECTOR, '#form > div:nth-child(6) > img').click()
         time.sleep(1)
 
 
 def get_url_queue():
-    mysqlUtil = MySQLTool('localhost', 'root', 'your database password', 'journal01')
+    mysqlUtil = MySQLTool('localhost', 'root', setting['mysqlPassword'], 'journal01')
     mysqlUtil.connect()
     results = mysqlUtil.select_journal_id()
     journal_ids = []
