@@ -1,37 +1,20 @@
 # letpub
 
 #### 介绍
-用python+selenium+IP代理池多线程爬取letpub网站详情页数据。可以爬取期刊名字、ISSN编号、影响因子等
-
+用python+selenium+ip代理池多线程爬取letpub网站详情页数据。
+可以爬取期刊名字、ISSN编号、影响因子、自引率、h-index、citeScore、期刊简介、期刊官方网站、期刊投稿网址、是否开放OA、涉及的研究方向、出版国家或地区、出版语言、出版周期、WOS期刊SCI分区、中科院预警名单、中科院SCI期刊分区（大类学科、小类学科、分区、是否为Top期刊、是否为综述期刊）、平均审稿速度、平均录用比例
 #### 软件架构
-软件架构说明
-
+本软件使用selenium自动化工具实现数据的采集
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 将项目下载到本地
+2. 导入所需要的包，更改代码文件中的文件路径（改成自己的文件路径）
+3. 更改spider中login()函数里的letpub邮箱地址、密码；更改数据库密码
+4. mysql创建好数据库
+5. 导入依赖的包，运行spider.py文件即可(必须要有谷歌浏览器，且chromedriver.exe版本要与谷歌浏览器版本一致)
 
-#### 使用说明
+#### 免责声明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. 本软件仅供学习交流严禁用于非法用途！否则后果自负！
+2. 对于任何原因在使用本软件时可能对用户自己或他人造成的任何形式的损失和伤害，本人概不负责，亦概不承担任何民事或刑事法律责任。

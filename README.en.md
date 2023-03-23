@@ -1,7 +1,7 @@
 # letpub
 
 #### Description
-用python+selenium+IP代理池多线程爬取letpub网站详情页数据。可以爬取期刊名字、ISSN编号、影响因子等
+用python+selenium+IP代理池多线程爬取letpub网站详情页数据。
 
 #### Software Architecture
 Software architecture description
